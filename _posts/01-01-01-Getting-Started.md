@@ -1,2 +1,2 @@
-# Getting Started {#getting_started_title}
+# Začíname {#getting_started_title}
 
