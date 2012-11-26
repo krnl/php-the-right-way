@@ -1,20 +1,20 @@
-# Community {#community_title}
+# Komunita {#community_title}
 
-The PHP community is as diverse as it is large, and it's members are ready and willing to support new PHP programmers. You should consider joining your local PHP user group (PUG) or attending larger PHP conferences to learn more about the best practices shown here. You can also hang out on IRC in the #phpc channel on irc.freenode.com and follow the [@phpc][phpc-twitter] twitter account. Get out there, meet new developers, learn new topics and, above all, make new friends.
+PHP komunita je tak rozdielna ako je veľká a jej členovia sú pripravení a ochotní podporovať nových PHP programátorov. Mali by ste zvážiť zapojenie sa do Vašej lokálnej užívateľskej skupiny alebo navštívenie väčších PHP konferencií, aby ste sa dozvedeli viac o odporúčaných postupoch, ktoré tam budu prezentované. Môžete tiež dobehnúť na IRC kanál #phpc na sieti irc.freenode.com a followovať účet [@phpc][phpc-twitter] na Twitteri. Vybehnite von, stretnite nových vývojárov, podučte sa v nových témach a predovšetkým, získajte nových priateľov.
 
-[Read the Official PHP Events Calendar][php-calendar]
+[Oficiálny kalendár PHP podujatí][php-calendar]
 
-## PHP User Groups
+## PHP Užívateľské skupiny
 
-If you live in a larger city, odds are there's a PHP user group nearby. Although there's not yet an official list of PUGs, you can easily find your local PUG by searching on [Google][google] or [Meetup.com][meetup]. If you live in a smaller town, there may not be a local PUG; if that's the case, start one!
+Ak žijete vo vačšom meste, je šanca, že niekde nablízku existuje nejaká PHP užívateľská skupina. Aj keď neexistuje oficiálny zoznam užívateľských skupín, veľmi jednoducho možete tú svoju lokálnu nájsť pomocou [Google][google] alebo [Meetup.com][meetup]. Ak žijete v menšom meste, pravdepodobne tam žiadna lokálna užívateľská skupina nebude; v tom prípade môžete nejakú založiť práve vy!
 
-[Read about User Groups on the PHP Wiki][php-wiki]
+[Prečítajte si o užívateľských skupinách na PHP Wiki][php-wiki]
 
-## PHP Conferences
+## PHP Konferencie
 
-The PHP community also hosts larger regional and national conferences in many countries around the world. Well-known members of the PHP community usually speak at these larger events, so it's a great opportunity to learn directly from industry leaders.
+PHP komunita taktiež usporadúva vačšie regionálne a národné konferencie v mnohých krajinách po celom svete. Na týchto konferenciách zvyčajne prednášajú dobre známi členovia PHP komunity, takže je to skvelá príležitosť naučiť sa niečo priamo od tých najlepších v obore.
 
-[Find a PHP Conference][php-conf]
+[Nájdite PHP konferenciu][php-conf]
 
 [php-calendar]: http://www.php.net/cal.php
 [google]: https://www.google.com/search?q=php+user+group+near+me
