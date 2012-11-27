@@ -1,10 +1,10 @@
-# Dependency Management {#dependency_management_title}
+# Spravovanie závislostí {#dependency_management_title}
 
-There are a ton of PHP libraries, frameworks, and components to choose from. Your project will likely use several of them — these are project dependencies. Until recently, PHP did not have a good way to manage these project dependencies. Even if you managed them manually, you still had to worry about autoloaders. No more.
+Existujú tony PHP knižníc, frameworkov a komponentov z ktorých si môžete vyberať. Váš projekt ich bude pravdepodobne používať hneď niekoľko - nazývame ich projektové závislosti. Až donedávna pre PHP neexistoval jednoduchý sposob ako spravovať tieto závislosti. Aj v prípade, keď ste si ich spravovali sami ste sa stále museli trápiť s autoloadermi. Teraž sa už nemusíte.
 
-Currently there are two major package management systems for PHP - Composer and PEAR. Which one is right for you? The answer is both.
+V súčasnosti máme k dispozícii dva významné systémy na správu balíčkov pre PHP - Composer a PEAR. Pýtate sa, ktorý je ten správny pre Vás? Odpoveď je obidva.
 
- * Use **Composer** when managing dependencies for a single project.
- * Use **PEAR** when managing dependencies for PHP as a whole on your system.
+* Ak spravujete závislosti pre jeden projekt, použite **Composer**
+* Ak spravujete závislosti pre PHP ako také Vašom systéme, použite **PEAR**
 
-In general, Composer packages will be available only in the projects that you explicitly specify whereas a PEAR package would be available to all of your PHP projects. While PEAR might sound like the easier approach at first glance, there are advantages to using a project-by-project approach to your dependencies.
+Vo všeobecnosti, balíčky Composer-u budu dostupné iba pre projekty, ktoré explicitne určíte, zatial čo balíčky PEAR-u budú dostupné pre všetky Vaše PHP projekty. Aj ked na prvý pohľad sa môže PEAR javiť ako jednoduchšia voľba, niekedy má viac výhod použitie projektovo špecifického prístupu na spravovanie závislostí. 
