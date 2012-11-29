@@ -1,41 +1,35 @@
-# Welcome
+# Vitajte
 
-There's a lot of outdated information on the Web that leads new PHP users astray, propagating bad practices and bad
-code. This must stop. _PHP: The Right Way_ is an easy-to-read, quick reference for PHP best practices, accepted coding
-standards, and links to authoritative tutorials around the Web.
+Na webe je veľké množstvo neaktuálnych informácii, ktoré nových používateľov jazyka PHP zvádzajú z cesty, propagujú zlé postupy a zlý kód. Toto musí skončiť, a preto je tu _PHP: The Right Way_, ľahko čitateľná, rýchla príručka plná odporúčaných postupov pre PHP, akceptovaných programátorských štandardov a odkazov na spoľahlivé tutoriály po celom webe.
 
-## Translations
+## Preklady
 
-_PHP: The Right Way_ is (or soon will be) translated into many different languages:
+Projekt _PHP: The Right Way_ je (alebo čoskoro bude) preložený do veľa rozličných jazykov:
 
-* [English](http://www.phptherightway.com)
-* [Chinese](http://wulijun.github.com/php-the-right-way)
-* [Japanese](http://ja.phptherightway.com)
-* [Polish](http://pl.phptherightway.com/)
-* [Portuguese](http://br.phptherightway.com/)
-* Russian (Coming Soon)
-* [Spanish](http://es.phptherightway.com)
-* [Ukrainian](http://iflista.github.com/php-the-right-way/)
+* [Angličtina](http://www.phptherightway.com)
+* [Čínština](http://wulijun.github.com/php-the-right-way)
+* [Japončina](http://ja.phptherightway.com)
+* [Poľština](http://pl.phptherightway.com/)
+* [Portugalčina](http://br.phptherightway.com/)
+* Ruština (Už čoskoro)
+* [Španielčina](http://es.phptherightway.com)
+* [Ukrajinčina](http://iflista.github.com/php-the-right-way/)
 
-## Disclaimer
+## Upozornenie
 
-_There is no canonical way to use PHP_. However, this website is a humble display of best practices,
-available options, and good information. It aims to introduce new PHP developers and to rethink seasoned pros with fresh
-ideas.
+_Neexistuje žiadny predpísany spôsob ako používať PHP_. Avšak táto stránka je skromnou prehliadkou odporúčaných postupov, dostupných možností a dobrých informácií. Dáva si za cieľ zasvätiť nových PHP vývojárov a ostrieľaným profesionálom dodať čerstvé nápady.
 
-This is a living document and will continue to be updated with more helpful information and examples as they become
-available.
+Tento projekt je "žijúci dokument", ktorý bude stále aktualizovaný s ďalšími užitočnými informáciami a príkladmi, hneď ako budú dostupné.
 
-## How to Contribute
+## Ako prispieť
 
-Help make this website the best resource for new PHP programmers! [Contribute on GitHub][1]
+Pomôžte urobiť z tejto stránky najlepší zdroj informácií pre nových PHP programátorov! [Prispejte na GitHub-e][1]
 
-## Spread the Word!
+## Dajte o nás vedieť!
 
-_PHP: The Right Way_ has web banner images you can use on your website. Show your support, and let new PHP developers
-know where to find good information!
+Projekt _PHP: The Right Way_ má niekoľko bannerových obrázkov, ktoré môžete umiestniť na svoje stránky. Ak Vás projekt zaujal, preukážte svoju podporu a dajte novým PHP vývojárom možnosť objaviť kopec dobrých informácií!
 
-[See Banner Images][2]
+[Prezrite si bannery][2]
 
 [1]: https://github.com/codeguy/php-the-right-way/tree/gh-pages
 [2]: /banners.html
