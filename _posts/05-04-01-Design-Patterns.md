@@ -2,15 +2,10 @@
 isChild: true
 ---
 
-## Design Patterns {#design_patterns_title}
+## Návrhové vzory {#design_patterns_title}
 
-When you are building your application it is helpful to use common patterns in your code and common patterns for the
-overall structure of your project. Using common patterns is helpful because it makes it much easier to manage your code
-and lets other developers quickly understand how everything fits together.
+Keď vytvárate Vašu aplikáciu, oplatí sa vo Vašom kód použiť bežné návrhové vzory a bežné návrhové vzory pre celkovú štruktúru projektu. Používanie bežných návrhových vzorov je užitočné, pretože robí Váš kód ľahšie spravovateľným a umožňuje ostatným vývojárom rýchlejšie pochopiť ako do seba všetko zapadá.
 
-If you use a framework then most of the higher level code and project structure will be based on that framework, so a
-lot of the pattern decisions are made for you. But it is still up to you to pick out the best patterns to follow in the
-code you build on top of the framework. If, on the other hand, you are not using a framework to build your application
-then you have to find the patterns that best suit the type and size of application that you're building.
+Ak používate framework, vačšina kódu vyššej úrovne a štruktúra projektu bude založená na frameworku, takže veľa rozhodnutí týkajúcich sa vzorov je už urobených za Vás. Avšak je stále na Vás vybrať tie najlepšie vzory, ktorými sa chcete nechať viesť pri tvorbe kódu postaveného nad frameworkom. Na druhej strane, ak na tvorbu Vašej aplikácie nepoužívate framework, musíte nájst vzory, ktoré sa najviac hodia typu a veľkosti aplikácie, ktorú budujete.
 
-* Continue reading on [Design Patterns](/pages/Design-Patterns.html)
+* Pokračujte v čítaní o [Návrhových vzoroch](/pages/Design-Patterns.html)
