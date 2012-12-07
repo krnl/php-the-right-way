@@ -14,6 +14,7 @@ Projekt _PHP: The Right Way_ je (alebo čoskoro bude) preložený do veľa rozli
 * Ruština (Už čoskoro)
 * [Španielčina](http://es.phptherightway.com)
 * [Ukrajinčina](http://iflista.github.com/php-the-right-way/)
+* [Bulharčina](http://bg.phptherightway.com/)
 
 ## Upozornenie
 
