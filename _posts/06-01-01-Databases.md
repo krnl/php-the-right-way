@@ -2,74 +2,55 @@
 title: Databases
 ---
 
-# Databases {#databases_title}
+# Databázy {#databases_title}
 
-Many times your PHP code will use a database to persist information. You have a few options to connect and interact
-with your database. The recommended option _until PHP 5.1.0_ was to use native drivers such as [mysql][mysql], [mysqli][mysqli], [pgsql][pgsql], etc.
+Na perzistentné ukladanie infromácií budete v PHP kóde často používať databázu. Existuje niekoľko možností ako sa pripojiť a pracovať s databázou. Odporúčaná možnosť _pred PHP 5.1.0_ bola použiť natívne rozhrania ako [mysql][mysql], [mysqli][mysqli], [pgsql][pgsql], a pod.
 
-Native drivers are great if you are only using ONE database in your application, but if, for example, you are using MySQL and a little bit of MSSQL,
-or you need to connect to an Oracle database, then you will not be able to use the same drivers. You'll need to learn a brand new API for each
-database &mdash; and that can get silly.
+Natívne rozhrania sú dobré ak vo vašek aplikácií používate iba jedinú databázu, ale ak napríklad používate MySQL a trochu MSSQL, alebo sa potrebujete pripojiť na Oracle databázu, nebudete môcť použiť rovnaké rozhrania. Budete sa musieť naučiť úplne nové API pre každú databázu.
 
-As an extra note on native drivers, the mysql extension for PHP is no longer in active development, and the official status since PHP 5.4.0 is
-"Long term deprecation". This means it will be removed within the next few releases, so by PHP 5.6 (or whatever comes after 5.5) it may well be gone. If you are using `mysql_connect()` and `mysql_query()` in your applications then you will be faced with a rewrite at some point down the
-line, so the best option is to replace mysql usage with mysqli or PDO in your applications within your own development shedules so you won't
-be rushed later on. _If you are starting from scratch then absolutely do not use the mysql extension: use the [MySQLi extension][mysqli], or use PDO._
+Mysql rozšírenie pre PHP už nie je aktívne vyvíjané a oficiálny stav od PHP 5.4.0 je "dlhodobo zastarané". To znamená, že bude odstránené v priebehu nasledujúcich vydaní, teda v PHP 5.6 (resp. vo verzii ktorá prijde po 5.5) môže zmiznúť. Ak používate `mysql_connect()` a `mysql_query()` vo vašej aplikácii, budete musieť skôr či neskôr kód prepísať. Najlepšia možnosť je nahradiť používanie mysql s mysqli alebo PDO v predstihu, skôr ako do toho budete dotlačený. _Ak začínate písať aplikáciu od nuly nemali by ste v žiadnom prípade používať mysql rozšírenie - použite [MySQLi rozšírenie][mysqli] alebo PDO.
 
 * [PHP: Choosing an API for MySQL](http://php.net/manual/en/mysqlinfo.api.choosing.php)
 
 ## PDO
 
-PDO is a database connection abstraction library &mdash;  built into PHP since 5.1.0 &mdash; that provides a common interface to talk with
-many different databases. PDO will not translate your SQL queries or emulate missing features; it is purely for connecting to multiple types
-of database with the same API.
+PDO je knižnica, ktorá poskytuje abstrakčnú vrstvu pre pripájanie k databázam - v PHP od 5.1.0 - ktorá poskytuje spoločné rozhranie pre komunikáciu s mnohými roznymi databázami. PDO neprekladá vaše SQL dopyty ani neemuluje chýbajúce funkcie. Slúži čisto len na pripájanie k rôznym typom databáz s rovnakým API.
 
-More importantly, `PDO` allows you to safely inject foreign input (e.g. IDs) into your SQL queries without worrying about database SQL injection attacks.
-This is possible using PDO statements and bound parameters.
+Dôležitejšie je, že `PDO` umožňuje bezpečné vkladanie cudzích vstupov (napr. ID) do vašich SQL dopytov, bez obáv o SQL injection útoky.
+Toto je možné vďaka PDO statementom a viazaným parametrom.
 
-Let's assume a PHP script receives a numeric ID as a query parameter. This ID should be used to fetch a user record from a database. This is the `wrong`
-way to do this:
+Predpokladajme, že PHP skript dostane numerické ID ako GET parameter. Toto ID bude použité na načítanie záznamu používateľa z databázy. `Zlý` spôsob ako to urobiť:
 
 {% highlight php %}
 <?php
-$pdo = new PDO('sqlite:users.db');
-$pdo->query("SELECT name FROM users WHERE id = " . $_GET['id']); // <-- NO!
+$pdo = new PDO('sqlite:pouzivatelia.db');
+$pdo->query("SELECT meno FROM pouzivatelia WHERE id = " . $_GET['id']); // <-- ZLE!
 {% endhighlight %}
 
-This is terrible code. You are inserting a raw query parameter into a SQL query. This will get you hacked in a
-heartbeat. Just imagine if a hacker passes in an inventive `id` parameter by calling a URL like
-`http://domain.com/?id=1%3BDELETE+FROM+users`.  This will set the `$_GET['id']` variable to `id=1;DELETE FROM users`
-which will delete all of your users! Instead, you should sanitize the ID input using PDO bound parameters.
+Toto je hrozný kód. Vkladáte neošetrený GET prameter do SQL dopytu. Predstavte si, že heker pošle vlastný `id` parameter volaním URL `http://domain.com/?id=1%3BDELETE+FROM+pouzivatelia`. Toto nastavi premennú `$_GET['id']` na `id=1;DELETE FROM pouzivatelia`, čo zmaže všetkých vašich používateľov! Namiesto toho by ste mali ošetriť ID vstup pomocou PDO viazaných parametrov.
 
 {% highlight php %}
 <?php
-$pdo = new PDO('sqlite:users.db');
-$stmt = $pdo->prepare('SELECT name FROM users WHERE id = :id');
-$stmt->bindParam(':id', $_GET['id'], PDO::PARAM_INT); //<-- Automatically sanitized by PDO
+$pdo = new PDO('sqlite:pouzivatelia.db');
+$stmt = $pdo->prepare('SELECT meno FROM pouzivatelia WHERE id = :id');
+$stmt->bindParam(':id', $_GET['id'], PDO::PARAM_INT); //<-- Automaticky osetrí PDO
 $stmt->execute();
 {% endhighlight %}
 
-This is correct code. It uses a bound parameter on a PDO statement. This escapes the foreign input ID before it is introduced to the
-database preventing potential SQL injection attacks.
+Toto je správny kód. Požíva viazané parametre v PDO statemente. Tento spôsob ošetrí cudzí ID vstup predtým ako je použitý v databáze, prevencia potencionálnych SQL injection útokov.
 
-* [Learn about PDO][1]
+* [Čítaj viac o PDO][1]
 
-You should also be aware that database connections use up resources and it was not unheard-of to have resources
-exhausted if connections were not implicitly closed, however this was more common in other languages. Using PDO you
-can implicitly close the connection by destroying the object by ensuring all remaining references to it are deleted,
-ie. set to NULL.  If you don't do this explicitly, PHP will automatically close the connection when your script ends
-unless of course you are using persistent connections.
+Mali by ste tiež vedieť, že databázové pripojenia vyčerpávajú systémové zdroje, čomu sa dá predísť explicitným uzatváraním pripojení. Pri používaní PDO môžete pripojenie implicitne uzatvoriť zrušením objektu, zmazaním všetkých referencií, napr. nastavením na NULL. Ak toto explicitne neurobíte, PHP automaticky uzatvorí pripojenie, keď váš skript skončí (ak nepoužívate perzistentné pripojenia).
 
-* [Learn about PDO connections][5]
+* [Čítaj viac o PDO pripojeniach][5]
 
-## Abstraction Layers
+## Abstrakčné vrstvy
 
-Many frameworks provide their own abstraction layer which may or may not sit on top of PDO.  These will often emulate features for
-one database system that another is missing form another by wrapping your queries in PHP methods, giving you actual database abstraction.
-This will of course add a little overhead, but if you are building a portable application that needs to work with MySQL, PostgreSQL and
-SQLite then a little overhead will be worth it the sake of code cleanliness.
+Mnoho frameworkov poskytuje vlastné abstrakčné vrstvy, ktoré môžu, ale nemusia byť postavené nad PDO. Tieto vrstvy často emulujú funkcie, ktoré jednotlivým databázam chýbajú, obalovaním vašich dopytov do PHP metód, poskytujúc kompletnú databázovú abstrakciu.
+Toto samozrejme trochu spomaľuje vykonávanie, ale ak pracujete na prenositeľnej aplikácii, ktorá musí pracovať s MySQL, PostgreSQL a SQLite, malé spomalenie môže byť, kvôli čistote kódu, prijatelné.
 
-Some abstraction layers have been built using the PSR-0 namespace standard so can be installed in any application you like:
+Niektoré abstrakčné vrstvy používajú menné priestory podľa PSR-0 štandardu, teda môžu byť použité v akejkoľvek aplikácii:
 
 * [Aura SQL][6]
 * [Doctrine2 DBAL][2]

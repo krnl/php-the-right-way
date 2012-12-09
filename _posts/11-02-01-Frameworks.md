@@ -2,22 +2,20 @@
 isChild: true
 ---
 
-## Frameworks {#frameworks_title}
+## Frameworky {#frameworks_title}
 
-Rather than re-invent the wheel, many PHP developers use frameworks to build out web applications. Frameworks abstract away many of the low-level concerns and provide helpful, easy-to-use interfaces to complete common tasks.
+Namiesto znovuobjavovania kolesa mnohí PHP vývojári používajú na tvorbu webových aplikácií frameworky. Frameworky abstahujú od  nízkoúrovňových problémov a poskytujú užitočné, jednoducho použiteľné rozhrania na riešenie bežných úloh.
 
-You do not need to use a framework for every project. Sometimes plain PHP is the right way to go, but if you do need a framework then there are three main types available:
+Pre každý projekt nepotrebujete framework. Niekedy je najlepšia voľba čisté PHP, ale ak potrebujete framework, k dispoícii sú tri základné typy:
 
-* Micro Frameworks
-* Full-Stack Frameworks
-* Component Frameworks
+* Mikro Frameworky
+* Plnohodnotné Framworky
+* Komponentové Frameworky
 
-Micro-frameworks are essentially a  wrapper to route a HTTP request to a callback, controller, method, etc as quickly as possible, and sometimes come with a few extra libraries to assist development such as basic database wrappers and the like. They are prominently used 
-to build remote HTTP services.
+Mikro-frameworky slúžia na smerovanie HTTP požiadavky na callback, kontroler, metódu, atď. tak rýchlo ako je to možné. Niekedy obsahujú aj knižnice naviac, napr. jednoduchú databázovú vrstvu a podobne. Najčastejšie sa používajú na tvorbu vzdialených HTTP služieb.
 
-Many frameworks add a considerable number of features on top of what is available in a micro-framework and these are known Full-Stack 
-Frameworks. These often come bundled with ORMs, Authentication packages, etc.
+Plnohodnotné frameworky, okrem funkčnosti ktorú poskytujú mikro-frameworky, poskytujú aj množstvo ďalších funkcií. Obvykle obsahujú ORM, autentifikačné riešenia a pod.
 
-Component-based frameworks are collections of specialized and single-purpose libraries. Disparate component-based frameworks can be used together to make a micro- or full-stack framework.
+Komponentové frameworky sú kolekcie špecializovaných knižníc. Rozdielne komponenty takýchto frameworky môžu byť použité spolu na tvorbu mikro alebo plnohodnotného frameworku.
 
-* [Popular PHP Frameworks](https://github.com/codeguy/php-the-right-way/wiki/Frameworks)
+* [Obľúbené PHP Frameworky](https://github.com/krnl/php-the-right-way/wiki/Frameworky)
