@@ -2,18 +2,15 @@
 isChild: true
 ---
 
-## Namespaces {#namespaces_title}
+## Menné priestory {#namespaces_title}
 
-As mentioned above, the PHP community has a lot of developers creating lots of code. This means that one library's PHP code may use the same class name as another library. When both libraries are used in the same namespace, they collide and cause trouble.
+Ako bolo spomenuté vyššie, PHP komunitu tvorí množstvo vývojárov tvoriacich množstvo kódu. To znamená, že PHP kód jednej knižnice môže používať rovnaký názov triedy ako iná knižnica. Ak sú obe knižnice použité v rovnakom mennom priestore, vzniká kolízia a tá spôsobuje problémy.
 
-_Namespaces_ solve this problem. As described in the PHP reference manual, namespaces may be compared to operating system directories that _namespace_ files; two files with the same name may co-exist in separate directories. Likewise, two PHP classes with the same name may co-exist in separate PHP namespaces. It's as simple as that.
+_Menné priestory_ riešia tento problém. Ako je popísané v PHP manuále, menné priestory môžeme prirovnať k adresárom operačného systému - dva súbory s rovnakým názvom môžu existovať v rozdielnych adresároch. Podobne, dve PHP triedy s rovnakým názvom môžu existovať v rozdielnych PHP menných priestoroch. Je to tak jednoduché.
 
-It is important for you to namespace your code so that it may be used by other developers without fear of colliding with other libraries.
+Je dôležité používať menné priestory vo vašom kóde, tak aby ho mohli použiť ostatní vývojári bez strachu z kolízie s inými knižnicami.
 
-One recommended way to use namespaces is outlined in [PSR-0][psr0], which aims to provide a standard file, class and namespace convention to allow plug-and-play code.
+Jeden z odporúčaných postupov ako používať menné priestory je popísaný v štandarde [PSR-0][psr0], ktorého cieľom je poskytovať štandardný spôsob ako pomenovať súbory, triedy a menné priestory, umožňujúc kompatibilnejší kód.
 
-* [Read about Namespaces][namespaces]
-* [Read about PSR-0][psr0]
-
-[namespaces]: http://php.net/manual/en/language.namespaces.php
-[psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
+* [Čítaj viac o menných priestoroch (EN)][namespaces]
+* [Čítaj viac o PSR-0 (EN)][psr0]
