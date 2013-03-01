@@ -10,7 +10,7 @@ It is important that you properly [_hash_][3] passwords before storing them. Pas
 
 **Hashing passwords with `password_hash`**
 
-In PHP 5.5 `password_hash` will be introduced. At this time it is using BCrypt, the strongest algorithm currently supported by PHP. It will updated in the future to support more algorithms as needed though. The `password_compat` library was created to provide forward compatibility for PHP >= 5.3.7.
+In PHP 5.5 `password_hash` will be introduced. At this time it is using BCrypt, the strongest algorithm currently supported by PHP. It will be updated in the future to support more algorithms as needed though. The `password_compat` library was created to provide forward compatibility for PHP >= 5.3.7.
 
 Below we hash a string, we then check the hash against a new string. Because our two source strings are different ('secret-password' vs. 'bad-password') this login will fail. 
 
@@ -18,9 +18,9 @@ Below we hash a string, we then check the hash against a new string. Because our
 <?php                                                                                                                                                                                                            
 require 'password.php';
 
-$passwordhash = password_hash('secret-password', PASSWORD_DEFAULT);
+$passwordHash = password_hash('secret-password', PASSWORD_DEFAULT);
 
-if (password_verify('bad-password', $password-hash)) {
+if (password_verify('bad-password', $passwordHash)) {
     //Correct Password
 } else {
     //Wrong password

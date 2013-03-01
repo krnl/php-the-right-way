@@ -1,5 +1,5 @@
 ---
-title: Databases
+title: Databázy
 ---
 
 # Databázy {#databases_title}
@@ -27,12 +27,12 @@ $pdo = new PDO('sqlite:pouzivatelia.db');
 $pdo->query("SELECT meno FROM pouzivatelia WHERE id = " . $_GET['id']); // <-- ZLE!
 {% endhighlight %}
 
-Toto je hrozný kód. Vkladáte neošetrený GET prameter do SQL dopytu. Predstavte si, že heker pošle vlastný `id` parameter volaním URL `http://domain.com/?id=1%3BDELETE+FROM+pouzivatelia`. Toto nastavi premennú `$_GET['id']` na `id=1;DELETE FROM pouzivatelia`, čo zmaže všetkých vašich používateľov! Namiesto toho by ste mali ošetriť ID vstup pomocou PDO viazaných parametrov.
+Toto je hrozný kód. Vkladáte neošetrený GET prameter do SQL dopytu. Predstavte si, že heker pošle vlastný `id` parameter volaním URL `http://domain.com/?id=1%3BDELETE+FROM+users`. Toto nastavi premennú `$_GET['id']` na `1;DELETE FROM users`, čo zmaže všetkých vašich používateľov! Namiesto toho by ste mali ošetriť ID vstup pomocou PDO viazaných parametrov.
 
 {% highlight php %}
 <?php
-$pdo = new PDO('sqlite:pouzivatelia.db');
-$stmt = $pdo->prepare('SELECT meno FROM pouzivatelia WHERE id = :id');
+$pdo = new PDO('sqlite:users.db');
+$stmt = $pdo->prepare('SELECT name FROM users WHERE id = :id');
 $stmt->bindParam(':id', $_GET['id'], PDO::PARAM_INT); //<-- Automaticky osetrí PDO
 $stmt->execute();
 {% endhighlight %}

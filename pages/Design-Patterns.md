@@ -62,6 +62,51 @@ yourself a lot of trouble down the road by using factories.
 
 * [Factory pattern on Wikipedia](https://en.wikipedia.org/wiki/Factory_pattern)
 
+## Singleton
+
+When designing web applications, it often makes sense conceptually and architecturally to allow access to one and 
+only one instance of a particular class. The singleton pattern enables us to do this.
+
+{% highlight php %}
+<?php 
+class Singleton
+{
+    static $instance;
+
+    private function __construct()
+    {
+    }
+
+    public static function getInstance()
+    {
+        if (!isset(self::$instance)) {
+            self::$instance = new self();
+        }
+
+        return self::$instance;
+    }
+}
+
+$instance1 = Singleton::getInstance();
+$instance2 = Singleton::getInstance();
+
+echo $instance1 === $instance2; // outputs 1
+{% endhighlight %}
+
+The code above implements the singleton pattern using a statically scoped variable and the `getInstance()` method. 
+Note that the constructor is declared as private to prevent instantiation outside of the class via `new` keyword.
+
+The singleton pattern is useful when we need to make sure we only have a single instance of a class for the entire 
+request lifecycle in a web application. This typically occurs when we have global objects (such as a Configuration 
+class) or a shared resource (such as an event queue).
+
+You should be wary when using the singleton pattern, as by its very nature it introduces global state into your 
+application, reducing testability. In most cases, dependency injection can (and should) be used in place of a 
+singleton class. Using dependency injection means that we do not introduce unnecessary coupling into the design of our 
+application, as the object using the shared or global resource requires no knowledge of a concretely defined class.
+
+* [Singleton pattern on Wikipedia](https://en.wikipedia.org/wiki/Singleton_pattern)
+
 ## Front Controller
 
 The front controller pattern is where you have a single entrance point for you web application (e.g. index.php) that
@@ -74,7 +119,7 @@ and gives you a central place to hook in code that should be run for every reque
 ## Model-View-Controller
 
 The model-view-controller (MVC) pattern and its relatives HMVC and MVVM let you break up code into logical objects that
-serve very specific purposes. Models serve as a data access layer where data it fetched and returned in formats usable
+serve very specific purposes. Models serve as a data access layer where data is fetched and returned in formats usable
 throughout your application. Controllers handle the request, process the data returned from models and load views to
 send in the response. And views are display templates (markup, xml, etc) that are sent in the response to the web
 browser.
