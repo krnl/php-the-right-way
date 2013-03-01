@@ -2,7 +2,7 @@
 title: Databázy
 ---
 
-# Databázy {#databases_title}
+# Databázy {#databázy_title}
 
 Na perzistentné ukladanie infromácií budete v PHP kóde často používať databázu. Existuje niekoľko možností ako sa pripojiť a pracovať s databázou. Odporúčaná možnosť _pred PHP 5.1.0_ bola použiť natívne rozhrania ako [mysql][mysql], [mysqli][mysqli], [pgsql][pgsql], a pod.
 
@@ -23,7 +23,7 @@ Predpokladajme, že PHP skript dostane numerické ID ako GET parameter. Toto ID 
 
 {% highlight php %}
 <?php
-$pdo = new PDO('sqlite:pouzivatelia.db');
+$pdo = new PDO('sqlite:users.db');
 $pdo->query("SELECT meno FROM pouzivatelia WHERE id = " . $_GET['id']); // <-- ZLE!
 {% endhighlight %}
 
