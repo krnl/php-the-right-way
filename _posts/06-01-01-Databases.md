@@ -2,19 +2,19 @@
 title: Databázy
 ---
 
-# Databázy {#databázy_title}
+# Databázy {#databases_title}
 
 Na perzistentné ukladanie infromácií budete v PHP kóde často používať databázu. Existuje niekoľko možností ako sa pripojiť a pracovať s databázou. Odporúčaná možnosť _pred PHP 5.1.0_ bola použiť natívne rozhrania ako [mysql][mysql], [mysqli][mysqli], [pgsql][pgsql], a pod.
 
-Natívne rozhrania sú dobré ak vo vašek aplikácií používate iba jedinú databázu, ale ak napríklad používate MySQL a trochu MSSQL, alebo sa potrebujete pripojiť na Oracle databázu, nebudete môcť použiť rovnaké rozhrania. Budete sa musieť naučiť úplne nové API pre každú databázu.
+Natívne rozhrania sú dobré ak vo vašej aplikácií používate iba jedinú databázu, ale ak napríklad používate MySQL a trochu MSSQL, alebo sa potrebujete pripojiť na Oracle databázu, nebudete môcť použiť rovnaké rozhrania. Budete sa musieť naučiť úplne nové API pre každú databázu.
 
-Mysql rozšírenie pre PHP už nie je aktívne vyvíjané a oficiálny stav od PHP 5.4.0 je "dlhodobo zastarané". To znamená, že bude odstránené v priebehu nasledujúcich vydaní, teda v PHP 5.6 (resp. vo verzii ktorá prijde po 5.5) môže zmiznúť. Ak používate `mysql_connect()` a `mysql_query()` vo vašej aplikácii, budete musieť skôr či neskôr kód prepísať. Najlepšia možnosť je nahradiť používanie mysql s mysqli alebo PDO v predstihu, skôr ako do toho budete dotlačený. _Ak začínate písať aplikáciu od nuly nemali by ste v žiadnom prípade používať mysql rozšírenie - použite [MySQLi rozšírenie][mysqli] alebo PDO.
+Mysql rozšírenie pre PHP už nie je aktívne vyvíjané a jeho oficiálny stav od PHP 5.4.0 je "dlhodobo zastarané". To znamená, že bude odstránené v priebehu nasledujúcich vydaní, teda v PHP 5.6 (resp. vo verzii ktorá prijde po 5.5) môže zmiznúť. Ak používate `mysql_connect()` a `mysql_query()` vo vašej aplikácii, budete musieť skôr či neskôr kód prepísať. Najlepšia možnosť je nahradiť používanie mysql s mysqli alebo PDO v predstihu, skôr ako do toho budete dotlačený. _Ak začínate písať aplikáciu od nuly nemali by ste v žiadnom prípade používať mysql rozšírenie - použite [MySQLi rozšírenie][mysqli] alebo PDO.
 
 * [PHP: Choosing an API for MySQL](http://php.net/manual/en/mysqlinfo.api.choosing.php)
 
 ## PDO
 
-PDO je knižnica, ktorá poskytuje abstrakčnú vrstvu pre pripájanie k databázam - v PHP od 5.1.0 - ktorá poskytuje spoločné rozhranie pre komunikáciu s mnohými roznymi databázami. PDO neprekladá vaše SQL dopyty ani neemuluje chýbajúce funkcie. Slúži čisto len na pripájanie k rôznym typom databáz s rovnakým API.
+PDO je knižnica, ktorá poskytuje abstrakčnú vrstvu pre pripájanie k databázam - v PHP od 5.1.0 - ktorá poskytuje spoločné rozhranie pre komunikáciu s mnohými rozličnými databázami. PDO neprekladá vaše SQL dopyty ani neemuluje chýbajúce funkcie. Slúži čisto len na pripájanie k rôznym typom databáz s rovnakým API.
 
 Dôležitejšie je, že `PDO` umožňuje bezpečné vkladanie cudzích vstupov (napr. ID) do vašich SQL dopytov, bez obáv o SQL injection útoky.
 Toto je možné vďaka PDO statementom a viazaným parametrom.
@@ -24,7 +24,7 @@ Predpokladajme, že PHP skript dostane numerické ID ako GET parameter. Toto ID 
 {% highlight php %}
 <?php
 $pdo = new PDO('sqlite:users.db');
-$pdo->query("SELECT meno FROM pouzivatelia WHERE id = " . $_GET['id']); // <-- ZLE!
+$pdo->query("SELECT name FROM users WHERE id = " . $_GET['id']); // <-- ZLE!
 {% endhighlight %}
 
 Toto je hrozný kód. Vkladáte neošetrený GET prameter do SQL dopytu. Predstavte si, že heker pošle vlastný `id` parameter volaním URL `http://domain.com/?id=1%3BDELETE+FROM+users`. Toto nastavi premennú `$_GET['id']` na `1;DELETE FROM users`, čo zmaže všetkých vašich používateľov! Namiesto toho by ste mali ošetriť ID vstup pomocou PDO viazaných parametrov.
