@@ -2,12 +2,11 @@
 isChild: true
 ---
 
-## Web Application Security {#web_application_security_title}
+## Bezpečnosť webových aplikácií {#web_application_security_title}
 
-There are bad people ready and willing to exploit your web application. It is important that you
- take necessary precautions to harden your web application's security. Luckily, the fine folks at [The Open Web Application Security Project][1] (OWASP) have compiled a comprehensive list of known security issues and methods to protect yourself against them. This is a must read for the security-conscious developer.
+Na svete sú zlí ľudia pripravení a ochotní zneužiť Vašu webovú aplikáciu. Preto je dôležité, aby ste podnikli potrebné opatrenia pre zvýšenie bezpečnosti Vašej aplikácie. Našťastie nám ľudia z [The Open Web Application Security Project][1] (OWASP) zostavili vyčerpávajúci zoznam známych bezpečnostných hrozieb a metód, ktorými sa pred nimi ochránite. Je to povinné čítanie pre každého bezpečnostne uvedomelého vývojára.
 
-* [Read the OWASP Security Guide][2]
+* [Čítajte OWASP Security Guide][2]
 
 [1]: https://www.owasp.org/
 [2]: https://www.owasp.org/index.php/Guide_Table_of_Contents
