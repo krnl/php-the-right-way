@@ -1,1 +1,1 @@
-# Security {#security_title}
+# Bezpečnosť {#security_title}

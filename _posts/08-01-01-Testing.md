@@ -1,9 +1,9 @@
-# Testing {#testing_title}
+# Testovanie {#testing_title}
 
-Writing automated tests for your PHP code is considered a best practice and can lead to well-built
-applications. Automated tests are a great tool for making sure your application
-does not break when you are making changes or adding new functionality and should not be ignored.
+Písanie automatizovaných testov k Vášmu PHP kódu sa považuje za dobrú prax a vedie k dobre postaveným aplikáciám. 
+Automatizované testy sú skvelým nástrojom k tomu, aby ste sa uistili, že sa Vaša aplikácia nerozbije pri robení zmien 
+alebo pridaní novej funkcionality. Testovanie by ste nemali ignorovať.
 
-There are several different types of testing tools (or frameworks) available for PHP, which use 
-different approaches - all of which are trying to avoid manual testing and the need for large 
-Quality Assurance teams, just to make sure recent changes didn't break existing functionality.
+Pre PHP existuje mnoho rozličných typov testovacích nástrojov (alebo frameworkov), ktoré používajú rozdielne prístupy, 
+ale všetky z nich sa snažia vyhnúť manuálnemu testovaniu a potrebe veľkých testovacích teamov len na uistenie, že nedávne 
+zmeny nerozbili existujúcu funkcionalitu aplikácie.
