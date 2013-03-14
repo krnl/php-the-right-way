@@ -1,6 +1,6 @@
 # Komunita {#community_title}
 
-PHP komunita je tak rozdielna ako je veľká a jej členovia sú pripravení a ochotní podporovať nových PHP programátorov. Mali by ste zvážiť zapojenie sa do Vašej lokálnej užívateľskej skupiny alebo navštívenie väčších PHP konferencií, aby ste sa dozvedeli viac o odporúčaných postupoch, ktoré tam budu prezentované. Môžete tiež dobehnúť na IRC kanál #phpc na sieti irc.freenode.com a followovať účet [@phpc][phpc-twitter] na Twitteri. Vybehnite von, stretnite nových vývojárov, podučte sa v nových témach a predovšetkým, získajte nových priateľov. Taktiež existuje veľká Google+ komunita pre PHP programátorov, kde medzi sebou diskutuje a rieši svoje problémy viac ako 9000 členov. Môžete sa k nim pripojiť na Google+ v komunite [PHP Programmer][php-programmers-gplus]
+PHP komunita je tak rozdielna ako je veľká a jej členovia sú pripravení a ochotní podporovať nových PHP programátorov. Mali by ste zvážiť zapojenie sa do Vašej lokálnej užívateľskej skupiny alebo navštívenie väčších PHP konferencií, aby ste sa dozvedeli viac o odporúčaných postupoch, ktoré tam budu prezentované. Môžete tiež dobehnúť na IRC kanál #phpc na sieti irc.freenode.com a followovať účet [@phpc][phpc-twitter] na Twitteri. Vybehnite von, stretnite nových vývojárov, podučte sa v nových témach a predovšetkým, získajte nových priateľov. Medzi ďalšie komunitné zdroje patrí Google+ skupina [PHP Programmers][php-programmers-gplus] a [StackOverflow][php-so].
 
 [Oficiálny kalendár PHP podujatí][php-calendar]
 
@@ -23,3 +23,5 @@ PHP komunita taktiež usporadúva vačšie regionálne a národné konferencie v
 [php-conf]: http://php.net/conferences/index.php
 [phpc-twitter]: https://twitter.com/phpc
 [php-programmers-gplus]: https://plus.google.com/u/0/communities/104245651975268426012
+[php-irc]: http://webchat.freenode.net/
+[php-so]: http://stackoverflow.com/questions/tagged/php
