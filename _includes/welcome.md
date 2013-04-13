@@ -7,14 +7,17 @@ Na webe je veľké množstvo neaktuálnych informácii, ktoré nových používa
 Projekt _PHP: The Right Way_ je (alebo čoskoro bude) preložený do veľa rozličných jazykov:
 
 * [Angličtina](http://www.phptherightway.com)
+* [Katalánčina](http://ca.phptherightway.com)
 * [Čínština](http://wulijun.github.com/php-the-right-way)
 * [Japončina](http://ja.phptherightway.com)
+* [Taliančina](http://it.phptherightway.com)
 * [Poľština](http://pl.phptherightway.com/)
 * [Portugalčina](http://br.phptherightway.com/)
 * Ruština (Už čoskoro)
 * [Španielčina](http://es.phptherightway.com)
 * [Ukrajinčina](http://iflista.github.com/php-the-right-way/)
 * [Bulharčina](http://bg.phptherightway.com/)
+* [Nemčina](http://rwetzlmayr.github.io/php-the-right-way/)
 
 ## Upozornenie
 
