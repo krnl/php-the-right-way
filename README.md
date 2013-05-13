@@ -32,13 +32,19 @@ Projekt _PHP: The Right Way_ má niekoľko bannerových obrázkov, ktoré môže
 
 <http://www.phptherightway.com>
 
-* [Čínsky](http://wulijun.github.com/php-the-right-way)
-* [Japonsky](http://ja.phptherightway.com)
-* [Poľsky](http://pl.phptherightway.com/)
-* [Portugalsky](http://br.phptherightway.com/)
-* [Španielsky](http://es.phptherightway.com)
-* [Ukrajinsky](http://iflista.github.com/php-the-right-way/)
-* [Bulharsky](http://bg.phptherightway.com/)
+* [Angličtina](http://www.phptherightway.com)
+* [Katalánčina](http://ca.phptherightway.com)
+* [Čínština](http://wulijun.github.com/php-the-right-way)
+* [Japončina](http://ja.phptherightway.com)
+* [Kórejčina](http://wafe.github.io/php-the-right-way/)
+* [Taliančina](http://it.phptherightway.com)
+* [Poľština](http://pl.phptherightway.com/)
+* [Portugalčina](http://br.phptherightway.com/)
+* [Ruština](http://getjump.github.io/ru-php-the-right-way)
+* [Španielčina](http://es.phptherightway.com)
+* [Ukrajinčina](http://iflista.github.com/php-the-right-way/)
+* [Bulharčina](http://bg.phptherightway.com/)
+* [Nemčina](http://rwetzlmayr.github.io/php-the-right-way/)
 
 ### Preklady
 
