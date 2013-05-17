@@ -1,33 +1,23 @@
-# Code Style Guide  {#code_style_guide_title}
+# Štýl formátovania kódu  {#code_style_guide_title}
 
-The PHP community is large and diverse, composed of innumerable libraries, frameworks, and components. It is common for
-PHP developers to choose several of these and combine them into a single project. It is important that PHP code adhere
-(as close as possible) to a common code style to make it easy for developers to mix and match various libraries for
-their projects.
+PHP komunita je veľká a rôznorodá, vďaka čomu vzniká veľké množstvo knižníc, frameworkov a komponentov. Je bežné, že PHP vývojári, vyberú niekoľko takýchto komponentov a skombinujú ich v rámci jedného projektu. Aby sme uľahčili PHP vývojárom možnosť spájať rôzne komponenty, je dôležité, aby náš PHP kód čo najviac zodpovedal zabehnutým konvenciám a štýlu formátovania.
 
-The [Framework Interop Group][fig] has proposed and approved a series of style recommendations, known as [PSR-0][psr0], 
-[PSR-1][psr1] and [PSR-2][psr2]. Don't let the funny names confuse you, these recommendations are merely 
-a set of rules that some projects like Drupal, Zend, Symfony, CakePHP, phpBB, AWS SDK, FuelPHP, Lithium, etc are starting 
-to adopt. You can use them for your own projects, or continue to use your own personal style.
+[Framework Interop Group][fig] predložila a schválila sériu štýlových odporúčaní, známe ako [PSR-0][psr0], 
+[PSR-1][psr1] a [PSR-2][psr2]. Tieto odporúčania sú série pravidiel, ktoré používajú projekty ako Drupal, Zend, Symfony, CakePHP, phpBB, AWS SDK, FuelPHP, Lithium, a pod. Môžete ich použiť pre vaše vlastné projekty, ale môžete tiež pokračovať s používaním vlastného osobitého štýlu.
 
-Ideally you should write PHP code that adheres to a known standard. This could be any combination of PSR's, or one 
-of the coding standards made by PEAR or Zend. This means other developers can easily read and work with your code, 
-and applications that implement the components can have consistency even when working with lots of third-party code. 
+Ideálne by ste mali písať PHP kód, ktorý zodpovedá známemu štandardu. Tým môže byť kombinácia PSR, alebo jeden zo štandardov kódu vytvorený PEARom alebo Zendom. Vďaka tomu ostatní delevoperi môžu jednoducho čítať a pracovať s vašim kódom a aplikácie, ktoré používajú tieto komponenty sú konzistentnejšie, aj keď pracujú s veľkým množstvom kódu tretích strán.
 
-* [Read about PSR-0][psr0]
-* [Read about PSR-1][psr1]
-* [Read about PSR-2][psr2]
-* [Read about PEAR Coding Standards][pear-cs]
-* [Read about Zend Coding Standards][zend-cs]
+* [Čítaj viac o PSR-0 (EN)][psr0]
+* [Čítaj viac o PSR-1 (EN)][psr1]
+* [Čítaj viac o PSR-2 (EN)][psr2]
+* [Čítaj viac o PEAR Coding Standards (EN)][pear-cs]
+* [Čítaj viac o Zend Coding Standards (EN)][zend-cs]
 
-You can use [PHP_CodeSniffer][phpcs] to check code against any one of these recommendations, and plugins for text editors 
-like [Sublime Text 2][st-cs] to be given real time feedback. 
+Na kontrolu kódu voči akémukoľvek z týchto štandardov môžete použiť [PHP_CodeSniffer][phpcs]. Pre okamžitú odozvu pri programovaní môžete použiť pluginy pre textové editory ako napr. [Sublime Text 2][st-cs].
 
-Use Fabien Potencier's [PHP Coding Standards Fixer][phpcsfixer] to automatically modify your code syntax so that it
-conforms with these standards, saving you from fixing each problem by hand.
+Problémy s formátovaním kódu nemusíte riešiť ručne, môžete použiť [PHP Coding Standards Fixer][phpcsfixer] od Fabiena Potenciera na automatickú úpravu formátovania vášho kódu, tak aby zodpovedal štandardom.
 
-English is preferred for all symbol names and code infrastructure. Comments may be written in any language easily readable 
-by all current and future parties who may be working on the codebase.
+Angličtina je preferovaná pre všetky názvy symbolov a infraštruktúru kódu. Komentáre môžu byť napísané v akomkoľvek jazyku jednoducho čitateľnom všetkými aktuálnymi aj budúcimi používateľmi kódu.
 
 [fig]: http://www.php-fig.org/
 [psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
