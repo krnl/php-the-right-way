@@ -2,22 +2,13 @@
 isChild: true
 ---
 
-## Exceptions {#exceptions_title}
+## Výnimky (Exceptions) {#exceptions_title}
 
-Exceptions are a standard part of most popular programming languages, but they are often overlooked by PHP programmers. 
-Languages like Ruby are extremely Exception heavy, so whenever something goes wrong such as a HTTP request failing, or 
-a DB query goes wrong, or even if an image asset could not be found, Ruby (or the gems being used) will throw an 
-exception to the screen meaning you instantly know there is a mistake. 
+Výnimky sú bežnou súčasťou najpopulárnejších programovacích jazykov, no často sú PHP programátormi prehliadané. Jazyky ako Ruby sú plné výnimiek, vždy keď nastane nejaka výnimočná situácia, ako zlyhanie HTTP požiadavky, alebo zlihanie dopytu na databázu, alebo neexistujúci súbor, Ruby (alebo použité gemy) používajú výnimky, vďaka čomu sa hneď dozviete, že niekde nastala chyba.
 
-PHP itself is fairly lax with this, and a call to `file_get_contents()` will usually just get you a `FALSE` and a warning.
-Many older PHP frameworks like CodeIgniter will just return a false, log a message to their proprietary logs and maybe 
-let you use a method like `$this->upload->get_error()` to see what went wrong. The problem here is that you have to go 
-looking for a mistake and check the docs to see what the error method is for this class, instead of having it made extremely 
-obvious.
+PHP samé o sebe zanedbáva používanie výnimiek, napr. volanie na `file_get_contents()` vráti iba `FALSE` a varovanie. Mnoho starších PHP frameworkov ako CodeIgniter iba vráti false, zapíše správu o chybe do logu a možno vám dovolí použiť metódu ako `$this->upload->get_error()` ak sa chcete dozvedieť, kde nastala chyba. Problémom je, že musíte pre nájdenie chyby a hľadať v dokumentácii akú metódu musíte zavolať pre konkrétnu triedu.
 
-Another problem is when classes automatically throw an error to the screen and exit the process. When you do this you 
-stop another developer from being able to dynamically handle that error. Exceptions should be thrown to make a developer aware 
-of an error, then they can choose how to handle this. E.g:
+Ďalším problémom je, keď triedy automaticky vyhadzujú chybu na obrazovku a ukončujú priebeh skriptu. Týmto riešením znemožňujete inému vývojárovi dynamicky spracovať chybu. Mali by sme použiť výnimky, aby sme vývojárovi oznámili chybu, ktorú potom môže spracovať, napr.:
 
 {% highlight php %}
 <?php
@@ -32,35 +23,31 @@ try
 }
 catch(Fuel\Email\ValidationFailedException $e)
 {
-    // The validation failed
+    // Validácia nebola úspešná
 }
 catch(Fuel\Email\SendingFailedException $e)
 {
-    // The driver could not send the email
+    // Email sa nepodarilo odoslať
 }
 {% endhighlight %}
 
-### SPL Exceptions
+### SPL výnimky
 
-The generic `Exception` class provides very little debugging context for the developer; however, to remedy this,
-it is possible to create a specialized `Exception` type by sub-classing the generic `Exception` class:
+Generická `Exception` trieda poskytuje vývojárovi veľmi málo kontextu pre debuggovanie, tento problém môžeme odstrániť vytvorením špecializovaných typov výnimiek pomocou rozširovania `Exception` triedy dedením:
 
 {% highlight php %}
 <?php
 class ValidationException extends Exception {}
 {% endhighlight %}
 
-This means you can add multiple catch blocks and handle different Exceptions differently. This can lead to 
-the creation of a <em>lot</em> of custom Exceptions, some of which could have been avoided using the SPL Exceptions 
-provided in the [SPL extension][splext]. 
+To znamená, že môžete pridať viac catch blokov a spracovať rôzne výnimky rôznym spôsobom. Toto môže viesť k vytvoreniu veľkého počtu vlastných výnimiek, niektorým z nich sa môžeme vyhnúť používaním SPL výnimiek, dostupných v [SPL rozšírení][splext].
 
-If for example you use the `__call()` Magic Method and an invalid method is requested then instead of throwing a standard 
-Exception which is vague, or creating a custom Exception just for that, you could just `throw new BadFunctionCallException;`.
+Napríklad ak používate magickú metódu `__call()` a je zavolaná neplatná metóda, namiesto použitia štandardnej výnimky, ktorá nehovorí o tom aká chyba nastala, alebo vytvoreniu špeciálnej výnimky iba pre tento prípad, môžete jednoducho použiť výnimku pre nesprávne volanie funkcie, ktorá je súčasťou SPL - `throw new BadFunctionCallException;`.
 
-* [Read about Exceptions][exceptions]
-* [Read about SPL Exceptions][splexe]
-* [Nesting Exceptions In PHP][nesting-exceptions-in-php]
-* [Exception Best Practices in PHP 5.3][exception-best-practices53]
+* [Čítaj viac o výnimkách (EN)][exceptions]
+* [Čítaj viac o SPL výnimkách (EN)][splexe]
+* [Vrstvenie výnimiek v PHP][nesting-exceptions-in-php]
+* [Najlepšie praktiky pri používaní výnimiek v PHP 5.3][exception-best-practices53]
 
 [exceptions]: http://php.net/manual/en/language.exceptions.php
 [splexe]: http://php.net/manual/en/spl.exceptions.php
