@@ -43,6 +43,7 @@ Toto je správny kód. Požíva viazané parametre v PDO statemente. Tento spôs
 
 Mali by ste tiež vedieť, že databázové pripojenia vyčerpávajú systémové zdroje, čomu sa dá predísť explicitným uzatváraním pripojení. Pri používaní PDO môžete pripojenie implicitne uzatvoriť zrušením objektu, zmazaním všetkých referencií, napr. nastavením na NULL. Ak toto explicitne neurobíte, PHP automaticky uzatvorí pripojenie, keď váš skript skončí (ak nepoužívate perzistentné pripojenia).
 
+
 * [Čítaj viac o PDO pripojeniach][5]
 
 ## Abstrakčné vrstvy

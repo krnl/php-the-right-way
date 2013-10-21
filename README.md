@@ -45,6 +45,7 @@ Projekt _PHP: The Right Way_ má niekoľko bannerových obrázkov, ktoré môže
 * [Ukrajinčina](http://iflista.github.com/php-the-right-way/)
 * [Bulharčina](http://bg.phptherightway.com/)
 * [Nemčina](http://rwetzlmayr.github.io/php-the-right-way/)
+* [Turečtina](http://hkulekci.github.io/php-the-right-way/)
 
 ### Preklady
 

@@ -29,6 +29,10 @@ catch(Fuel\Email\SendingFailedException $e)
 {
     // Email sa nepodarilo odoslať
 }
+finally
+{
+    // Use this to let user know email was sent
+}
 {% endhighlight %}
 
 ### SPL výnimky

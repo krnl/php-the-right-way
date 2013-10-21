@@ -6,7 +6,7 @@ isChild: true
 
 PHP je dostupné pre Windows niekoľkými spôsobmi. Môžete si [stiahnuť spustiteľnú verziu][php-downloads] a donedávna bol dostupný aj '.msi' inštalátor, ktorý už nie je podporovaný a posledná verzia je PHP 5.3.0.
 
-Na učenie sa a lokálny vývoj možete použiť zabudovaný webserver v PHP 5.4, ktorý nemusíte konfigurovať. Ak chete "všetko v jednom", vrátane plnohodnotného web serveru a MySQL, nástroje ako [Web Platform Installer][wpi], 
+Na učenie sa a lokálny vývoj možete použiť zabudovaný webserver v PHP 5.4+, ktorý nemusíte konfigurovať. Ak chcete "všetko v jednom", vrátane plnohodnotného web servera a MySQL, nástroje ako [Web Platform Installer][wpi], 
 [Zend Server CE][zsce], [XAMPP][xampp] a [WAMP][wamp] vám pomôžu rýchlo pripraviť prostredie pre vývoj na Windowse. Tieto nástroje však môžu byť trochu iné ako produkčné, preto dávajte pozor na rozdiely v prostredí ak pracujete na Windowse a nasadzujete do produkcie na Linuxe.
 
 Ak potrebujete produkčný sytém s Windowsom, IIS7 vám poskytne najväčšiu stabilitu a najlepší výkon. Môžete použiť [phpmanager][phpmanager] (plugin pre IIS7) na zjednodušenie konfigurácie a manažovania PHP. IIS7 obsahuje zabudované FastCGI pripravené na použitie, stači zaregistrovať PHP ako obsluhovaciu aplikáciu. Pre podporu a viac informácií je [vyhradená časť na iis.net (EN)][php-iis] pre PHP.

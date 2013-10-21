@@ -15,7 +15,7 @@ PHP obsahuje kompletný model objektovo-orientovaného programovania, podporuje 
 
 ### Funkcionálne programovanie
 
-PHP podporuje funkcie prvej triedy, čo znamená, že funkcie môžu byť priradené do premenných. Tieto funkcie sa volajú anonymné funkcie alebo closure, sú dostupné od verzie PHP 5.3 (2009). Používateľské aj vstavané funkcie môžu byť uloŽené v premennej a volané dynamicky. Funkcie môžu byť predávané ako argumenty iným funkciám a funkcie môžu vracať iné funkcie.
+PHP podporuje funkcie prvej triedy, čo znamená, že funkcie môžu byť priradené do premenných. Používateľské aj vstavané funkcie môžu byť uložené v premennej a volané dynamicky. Funkcie môžu byť predávané ako argumenty iným funkciám (tzv. High-order funkcie) a funkcie môžu vracať iné funkcie.
 
 Rekurzia, pri ktorej funkcia volá samu seba, je podporovaná, ale väčšina PHP kódu sa sústreďuje na iteráciu.
 

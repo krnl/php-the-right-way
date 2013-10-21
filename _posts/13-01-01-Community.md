@@ -6,7 +6,7 @@ PHP komunita je tak rozdielna ako je veľká a jej členovia sú pripravení a o
 
 ## PHP Užívateľské skupiny
 
-Ak žijete vo vačšom meste, je šanca, že niekde nablízku existuje nejaká PHP užívateľská skupina. Aj keď neexistuje oficiálny zoznam užívateľských skupín, veľmi jednoducho možete tú svoju lokálnu nájsť pomocou [Google][google] alebo [Meetup.com][meetup]. Ak žijete v menšom meste, pravdepodobne tam žiadna lokálna užívateľská skupina nebude; v tom prípade môžete nejakú založiť práve vy!
+Ak žijete vo vačšom meste, je šanca, že niekde nablízku existuje nejaká PHP užívateľská skupina. Aj keď neexistuje oficiálny zoznam užívateľských skupín, veľmi jednoducho možete tú svoju lokálnu nájsť pomocou [Google][google], [Meetup.com][meetup] alebo [PHP.ug][php-ug]. Ak žijete v menšom meste, pravdepodobne tam žiadna lokálna užívateľská skupina nebude; v tom prípade môžete nejakú založiť práve vy!
 
 [Prečítajte si o užívateľských skupinách na PHP Wiki][php-wiki]
 
@@ -19,9 +19,10 @@ PHP komunita taktiež usporadúva vačšie regionálne a národné konferencie v
 [php-calendar]: http://www.php.net/cal.php
 [google]: https://www.google.com/search?q=php+user+group+near+me
 [meetup]: http://www.meetup.com/find/
+[php-ug]: http://php.ug
 [php-wiki]: https://wiki.php.net/usergroups
 [php-conf]: http://php.net/conferences/index.php
 [phpc-twitter]: https://twitter.com/phpc
 [php-programmers-gplus]: https://plus.google.com/u/0/communities/104245651975268426012
-[php-irc]: http://webchat.freenode.net/
+[php-irc]: http://webchat.freenode.net/?channels=phpc
 [php-so]: http://stackoverflow.com/questions/tagged/php
